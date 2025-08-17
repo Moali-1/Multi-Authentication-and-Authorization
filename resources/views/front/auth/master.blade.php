@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+
+<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default"
+    data-assets-path="{{ asset('assets-front') }}/" data-template="vertical-menu-template-free">
+
+@include('front.auth.partials.head')
+
+
+<body>
+
+    @yield('content')
+
+
+
+    <div class="buy-now">
+        <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank"
+            class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
+    </div>
+
+    @include('front.auth.partials.scripts')
+</body>
+
+</html>
