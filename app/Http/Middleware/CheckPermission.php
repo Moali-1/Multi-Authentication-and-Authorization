@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class CeckPermission
+class CheckPermission
 {
     /**
      * Handle an incoming request.
@@ -16,6 +16,7 @@ class CeckPermission
      */
     public function handle(Request $request, Closure $next, $permission): Response
     {
+
         if (Auth::guard('admin')->user()->hasAnyPermission([$permission])) {
 
             return $next($request);
